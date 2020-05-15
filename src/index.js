@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './styles.scss';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const App = (props) => (
+  <div className='container0'>
+    <div className='container1'>
+      <div className='item1'>Item 1</div>
+      <div className='item1 container2'>
+        <div className='item2 container3'><div className="content">Item 1</div></div>
+        <div className='item2 container3'><div className="content">Item 2</div></div>
+        <div className='item2 container3'><div className="content">Item 3</div></div>
+        <div className='item2 container3'><div className="content">Item 4</div></div>
+        <div className='item2 container3'><div className="content">Item 5</div></div>
+      </div>
+      <div className='item1'>Item 3</div>
+    </div>
+  </div>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
